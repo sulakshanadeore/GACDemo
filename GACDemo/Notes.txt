@@ -40,7 +40,7 @@ version no.
 ------------------------------------------------------------------------------
 3) Satellite----which are used for Localization and Globalization purpose.
 Globalization: A resource created by a process for the users across the Globe(multiple cultures).
-Localization: A resouce created by a process for  customizatio  to make our app behave
+Localization: A resouce created by a process for  customization  to make our app behave
 as per the current culture and locale.
 
 
