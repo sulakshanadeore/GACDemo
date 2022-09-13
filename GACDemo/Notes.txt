@@ -60,6 +60,7 @@ Steps for registering assembly in GAC:
 1) Create and build an assembly.
 2) sign the assembly: Go the properties, Signing Tab: Sign the assembly check box true,
 name of the signfile.snk.
+Snk--- Strong name key file.
 Build the assembly.
 
 3) register into GAC: Open Administrator Developer Command Prompt
@@ -67,6 +68,42 @@ Build the assembly.
 gacutil /i "Path of assemly (Till .dll)"
 
 How to open the GAC:
+
+
+
+--------------------
+Sign-- makes the assembly tamper proof.
+The consumer knows the origin and is trusted.
+For registering the assembly into GAC it must be signed.
+Public key token
+Strong named key file---- > which is known to the project using it.
+Strong names provide unique identity, they are not for security purpose.
+becoz it calls the dll using public key token.
+-------------------------------------------
+Delay sign
+
+particular file need not be accessed on a daily basis, but can be accessed by a
+few individuals daily then u have the option of delay singing.
+Delay sign--private key token.
+
+Signing is done just before putting the assembly to production server.
+no Strong named key file---- > which is known to the project using it.
+--------------------------------------------------------------------
+
+namespace vs assembly
+----------------------
+1) Assembly will contain namespaces,classes, datatypes.
+Assembly is the smallest unit of deployment.
+Assembly defines the name of the dll file.
+Assembly avoids dll hell problem due to version nos.
+Solution name means the topmost folder
+
+2) 
+namespace is used in order to avoid conflict of user defined classes.
+namespace is a collection of names where each name is unique.
+they define logical boundry for a group of classes.
+namespace must be specified in the project properties.
+projectname is namespace here.
 
 
 
