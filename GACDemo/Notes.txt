@@ -34,7 +34,7 @@ Why?
 Becoz, if we donot make it shared copies of the code will get created which utilizes 
 memory resource.
 
-2) Shared : Making it shared means, registering it into GAC(Global Assembly Cache) using 
+2) Shared/Public : Making it shared means, registering it into GAC(Global Assembly Cache) using 
 version no.
 
 ------------------------------------------------------------------------------
@@ -54,7 +54,19 @@ de----Bonjour
 greet.en-US.resx
 greet.hi-IN.resx
 greet.de-GE.resx
+----------------------------------------------------------
 
+Steps for registering assembly in GAC:
+1) Create and build an assembly.
+2) sign the assembly: Go the properties, Signing Tab: Sign the assembly check box true,
+name of the signfile.snk.
+Build the assembly.
+
+3) register into GAC: Open Administrator Developer Command Prompt
+
+gacutil /i "Path of assemly (Till .dll)"
+
+How to open the GAC:
 
 
 
